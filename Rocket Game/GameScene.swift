@@ -26,7 +26,9 @@ var gameOver:Bool = true
 var score:Int = 0
 let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
 	score += 1
-	
+	if score % 20 == 0 {
+		a_vel *= CGFloat(1.2)
+	}
 }
 
 class GameScene: SKScene {
@@ -36,6 +38,7 @@ class GameScene: SKScene {
 	var player = SKSpriteNode()
 	var button = SKNode()
 	var background = SKSpriteNode()
+	var backgroundOther = SKSpriteNode()
 	
 	
 	
@@ -43,6 +46,7 @@ class GameScene: SKScene {
 		
 		player = self.childNode(withName: "player") as! SKSpriteNode
 		background = self.childNode(withName: "background") as! SKSpriteNode
+		backgroundOther = self.childNode(withName: "backgroundOther") as! SKSpriteNode
 		scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
 		label = self.childNode(withName: "startLabel") as! SKLabelNode
 		button = self.childNode(withName: "startButton") as! SKNode
@@ -120,8 +124,12 @@ class GameScene: SKScene {
 				}
 			}
 			background.run(SKAction.moveBy(x: a_vel * 0.5, y: 0, duration: 0))
+			backgroundOther.run(SKAction.moveBy(x: a_vel * 0.5, y: 0, duration: 0))
 			if background.position.x < CGFloat(-1709) {
-				background.position.x = 1709
+				background.position.x = 3627
+			}
+			if backgroundOther.position.x < CGFloat(-1709) {
+				backgroundOther.position.x = 3627
 			}
 		}
 	}
