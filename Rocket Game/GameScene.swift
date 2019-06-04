@@ -32,13 +32,13 @@ let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer i
 }
 
 class GameScene: SKScene {
-	
 	var label = SKLabelNode()
 	var scoreLabel = SKLabelNode()
 	var player = SKSpriteNode()
 	var button = SKNode()
 	var background = SKSpriteNode()
 	var backgroundOther = SKSpriteNode()
+	let backgroundMusic = SKAudioNode(fileNamed: "spacemusic.mp3")
 	
 	
 	
@@ -50,6 +50,9 @@ class GameScene: SKScene {
 		scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
 		label = self.childNode(withName: "startLabel") as! SKLabelNode
 		button = self.childNode(withName: "startButton") as! SKNode
+		self.addChild(backgroundMusic)
+		
+		backgroundMusic.run(SKAction.stop())
 		for i in 0...(asteroids.count - 1) {
 			asteroids[i] = self.childNode(withName: "asteroid" + String(i)) as! SKSpriteNode
 		}
@@ -73,6 +76,10 @@ class GameScene: SKScene {
 				label.run(SKAction.hide())
 				label.text = "Game Over"
 				score = 0;
+				backgroundMusic.run(SKAction.stop())
+				backgroundMusic.run(SKAction.play())
+				
+				a_vel = -6.0
 			}
 			player.run(SKAction.moveTo(y: location.y, duration: 0.1))
 			player.run(SKAction.moveTo(x: location.x, duration: 0.1))
@@ -106,9 +113,10 @@ class GameScene: SKScene {
 					asteroids[i].position.y = CGFloat.random(in: -640...640)
 				}
 
-				if (player.position.x + 25 >= asteroids[i].position.x - 50) && (player.position.x - 25 <= asteroids[i].position.x + 50) && (player.position.y + 50 >= asteroids[i].position.y - 50) && (player.position.y - 50 <= asteroids[i].position.y + 50) {
+				if (player.position.x + 23 >= asteroids[i].position.x - 45) && (player.position.x - 23 <= asteroids[i].position.x + 45) && (player.position.y + 45 >= asteroids[i].position.y - 45) && (player.position.y - 45 <= asteroids[i].position.y + 45) {
 					gameOver = true
 					
+					run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: true))
 					
 					player.run(SKAction.hide())
 					button.run(SKAction.unhide())

@@ -17,6 +17,8 @@
 		071D56EC2297253000356374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071D56EA2297253000356374 /* LaunchScreen.storyboard */; };
 		071D56F72297253000356374 /* Rocket_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D56F62297253000356374 /* Rocket_GameTests.swift */; };
 		071D57022297253000356374 /* Rocket_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D57012297253000356374 /* Rocket_GameUITests.swift */; };
+		07BF183922A6B3DE00AC9A60 /* spacemusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07BF183822A6B3DE00AC9A60 /* spacemusic.mp3 */; };
+		07BF183B22A6B3F000AC9A60 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07BF183A22A6B3F000AC9A60 /* explosion.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		071D56FD2297253000356374 /* Rocket GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rocket GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		071D57012297253000356374 /* Rocket_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket_GameUITests.swift; sourceTree = "<group>"; };
 		071D57032297253000356374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BF183822A6B3DE00AC9A60 /* spacemusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spacemusic.mp3; sourceTree = "<group>"; };
+		07BF183A22A6B3F000AC9A60 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				071D56DB2297252F00356374 /* AppDelegate.swift */,
+				07BF183822A6B3DE00AC9A60 /* spacemusic.mp3 */,
 				071D56DD2297252F00356374 /* GameScene.sks */,
 				071D56DF2297252F00356374 /* Actions.sks */,
 				071D56E12297252F00356374 /* GameScene.swift */,
 				071D56E32297252F00356374 /* GameViewController.swift */,
+				07BF183A22A6B3F000AC9A60 /* explosion.mp3 */,
 				071D56E52297252F00356374 /* Main.storyboard */,
 				071D56E82297253000356374 /* Assets.xcassets */,
 				071D56EA2297253000356374 /* LaunchScreen.storyboard */,
@@ -241,6 +247,8 @@
 				071D56E72297252F00356374 /* Main.storyboard in Resources */,
 				071D56DE2297252F00356374 /* GameScene.sks in Resources */,
 				071D56E92297253000356374 /* Assets.xcassets in Resources */,
+				07BF183922A6B3DE00AC9A60 /* spacemusic.mp3 in Resources */,
+				07BF183B22A6B3F000AC9A60 /* explosion.mp3 in Resources */,
 				071D56EC2297253000356374 /* LaunchScreen.storyboard in Resources */,
 				071D56E02297252F00356374 /* Actions.sks in Resources */,
 			);
