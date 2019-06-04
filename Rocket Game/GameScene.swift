@@ -66,7 +66,7 @@ class GameScene: SKScene {
 			
 			let location = touch.location(in: self)
 			
-			if (location.y >= button.position.y - 50) && (location.y <= button.position.y + 50) && (location.x >= button.position.x - 50) && (location.x <= button.position.x + 50) && gameOver == true {
+			if (location.y >= button.position.y - 270) && (location.y <= button.position.y + 270) && (location.x >= button.position.x - 520) && (location.x <= button.position.x + 520) && gameOver == true {
 				gameOver = false
 				for i in 0...(asteroids.count - 1) {
 					asteroids[i].run(SKAction.unhide())
