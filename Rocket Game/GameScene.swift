@@ -51,8 +51,8 @@ class GameScene: SKScene {
 		label = self.childNode(withName: "startLabel") as! SKLabelNode
 		button = self.childNode(withName: "startButton") as! SKNode
 		self.addChild(backgroundMusic)
-		
 		backgroundMusic.run(SKAction.stop())
+		player.run(SKAction.hide())
 		for i in 0...(asteroids.count - 1) {
 			asteroids[i] = self.childNode(withName: "asteroid" + String(i)) as! SKSpriteNode
 		}
