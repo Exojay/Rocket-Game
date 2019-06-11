@@ -11,15 +11,6 @@ import GameplayKit
 
 var asteroids:[SKSpriteNode] = [SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),SKSpriteNode(),SKSpriteNode()]
 
-/*var asteroids = [
-	[SKSpriteNode(), CGFloat(CGFloat.random(in: 480...1000)), CGFloat(CGFloat.random(in: -640...640))],
-	[SKSpriteNode(), CGFloat(CGFloat.random(in: 480...1000)), CGFloat(CGFloat.random(in: -640...640))],
-	[SKSpriteNode(), CGFloat(CGFloat.random(in: 480...1000)), CGFloat(CGFloat.random(in: -640...640))],
-	[SKSpriteNode(), CGFloat(CGFloat.random(in: 480...1000)), CGFloat(CGFloat.random(in: -640...640))],
-	[SKSpriteNode(), CGFloat(CGFloat.random(in: 480...1000)), CGFloat(CGFloat.random(in: -640...640))],
-	[SKSpriteNode(), CGFloat(CGFloat.random(in: 480...1000)), CGFloat(CGFloat.random(in: -640...640))],
-	]
-*/
 var a_vel:CGFloat = -6.0
 var gameOver:Bool = true
 
